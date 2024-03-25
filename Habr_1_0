@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class Habr_1_0 {
+    public static void main(String[] args) {
+        int size = 10;
+
+        double[] numbers = new double[size];
+        for (int i = 0; i < size; i++) {
+            numbers[i] = Math.random();
+        }
+
+        System.out.println("An array of random numbers:");
+        System.out.println(Arrays.toString(numbers));
+
+        double max = Arrays.stream(numbers).max().getAsDouble();
+
+        double min = Arrays.stream(numbers).min().getAsDouble();
+
+        double average = Arrays.stream(numbers).average().getAsDouble();
+
+        System.out.println("Maximum value: " + max);
+        System.out.println("Minimum value: " + min);
+        System.out.println("The average value: " + average);
+    }
+}
+//Output: An array of random numbers:
+[0.06864678370885591, 0.6651112499224452, 0.8758901067338098, 0.14435754223617658, 0.07305575913902118, 0.08644336515429263, 0.1135831427184616, 0.6806807569491257, 0.4606913770255998, 0.14073774326382116]
+Maximum value: 0.8758901067338098
+Minimum value: 0.06864678370885591
+The average value: 0.330919782685161
