@@ -34,7 +34,6 @@ public class Habr_2_1 {
 
         Habr_2_1 picker = new Habr_2_1(values, weights);
 
-        // Test the picker
         for (int i = 0; i < 10; i++) {
             System.out.println("Randomly picked value: " + picker.Habr_2_1());
         }
